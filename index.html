@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Pokédex</title>
+  <script src="pokedex.js" defer></script>
+  <link rel="stylesheet" href="pokedex.css" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <nav>
+    <div class="types-menu">
+      <input id="menu__toggle" type="checkbox"/>
+      <label class="menu__btn" for="menu__toggle">
+        <p class="menu__text">TIPOS</p>
+      </label>
+      <ol class="menu__box">
+        <ol class="types"></ol>
+      </ol>
+    </div>
+    <!-- <div class="pokedex-menu">
+      <input id="menu__toggle" type="checkbox"/>
+      <label class="menu__btn" for="menu__toggle">
+        <p class="menu__text">POKÉDEX</p>
+      </label>
+      <ol class="menu__box">
+        <ol class="pokedex-list"></ol>
+      </ol>
+    </div> -->
+    <h1>Pokédex</h1>
+    <div class="input-container">
+      <input id="input-search" type="text" placeholder="Busca por nombre o número" />
+    </div>
+  </nav>
+  <div class="container">
+    <ol id="pokedex">
+      <div class="loading">
+        <img src="./loading.gif" alt="">
+        <h2>LOADING...</h2>
+      </div>
+    </ol>
+    <ol id="pokedex2"></ol>
+    <ol id="pokedex3"></ol>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+$mobile_breakpoint: 576px;
+$tablet_breakpoint: 768px;
+$tablet_landscape_breakpoint: 992px;
+$desktop_breakpoint: 1200px;
+
+// SCSS Mixins
+@mixin mobile {
+  @media only screen and (min-width: #{$mobile_breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet_breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media only screen and (min-width: #{$tablet_landscape_breakpoint}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop_breakpoint}) {
+    @content;
+  }
+}
