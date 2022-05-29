@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Pokédex</title>
+  <title>Pokédex API</title>
   <script src="pokedex.js" defer></script>
   <link rel="stylesheet" href="pokedex.css" />
   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
@@ -22,15 +22,18 @@
         <ol class="types"></ol>
       </ol>
     </div>
-    <!-- <div class="pokedex-menu">
-      <input id="menu__toggle" type="checkbox"/>
-      <label class="menu__btn" for="menu__toggle">
-        <p class="menu__text">POKÉDEX</p>
+
+    <div class="pokedex-menu">
+      <input id="pokedex-menu__toggle" type="checkbox"/>
+      <label class="pokedex-menu__btn" for="pokedex-menu__toggle">
+        <p class="pokedex-menu__text">POKÉDEX</p>
       </label>
-      <ol class="menu__box">
-        <ol class="pokedex-list"></ol>
+      <ol class="pokedex-menu__box">
+        <li class="pokedex-kanto">KANTO</li>
+        <li class="pokedex-johto">JOHTO</li>
+        <li class="pokedex-hoenn">HOENN</li>
       </ol>
-    </div> -->
+    </div>
     <h1>Pokédex</h1>
     <div class="input-container">
       <input id="input-search" type="text" placeholder="Busca por nombre o número" />
