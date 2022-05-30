@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Pokédex API</title>
-  <script src="pokedex.js" defer></script>
-  <link rel="stylesheet" href="pokedex.css" />
+  <script src="./pokedex.js" defer></script>
+  <link rel="stylesheet" href="./pokedex.css" />
   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <nav>
     <div class="types-menu">
-      <input id="menu__toggle" type="checkbox"/>
+      <input id="menu__toggle" type="checkbox" />
       <label class="menu__btn" for="menu__toggle">
         <p class="menu__text">TIPOS</p>
       </label>
@@ -24,14 +24,17 @@
     </div>
 
     <div class="pokedex-menu">
-      <input id="pokedex-menu__toggle" type="checkbox"/>
+      <input id="pokedex-menu__toggle" type="checkbox" />
       <label class="pokedex-menu__btn" for="pokedex-menu__toggle">
         <p class="pokedex-menu__text">POKÉDEX</p>
       </label>
       <ol class="pokedex-menu__box">
-        <li class="pokedex-kanto">KANTO</li>
-        <li class="pokedex-johto">JOHTO</li>
-        <li class="pokedex-hoenn">HOENN</li>
+        <ol class="pokedexTypes">
+          <li id="pokedex-todas">TODAS (1-386)</li>
+          <li id="pokedex-kanto">KANTO (1-151)</li>
+          <li id="pokedex-johto">JOHTO (152-251)</li>
+          <li id="pokedex-hoenn">HOENN (252-386)</li>
+        </ol>
       </ol>
     </div>
     <h1>Pokédex</h1>
@@ -46,8 +49,6 @@
         <h2>LOADING...</h2>
       </div>
     </ol>
-    <ol id="pokedex2"></ol>
-    <ol id="pokedex3"></ol>
   </div>
 </body>
 

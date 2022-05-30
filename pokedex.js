@@ -24,12 +24,6 @@ const TYPES = [
   "shadow",
 ];
 
-const pokedexType = [
-  "Kanto",
-  "Johto",
-  "Hoenn",
-];
-
 const getAllPokemons = () => {
   return fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
     .then((response) => response.json())
@@ -66,7 +60,7 @@ const drawPokemons = (pokemons) => {
       li.classList.add("card");
       const html = `
               <img class="card-image" src=${poke.image} alt=${poke.name}>
-              <p class="card-title">${poke.name}<p>
+              <p class="card-title">${poke.name}   #${poke.id}<p>
               <div class="card-subtitle">Tipo: ${poke.type[0]} ${
         poke.type[1] ? `, ${poke.type[1]}` : ""
       }</div>
@@ -116,6 +110,115 @@ const drawTypesButtons = () => {
   });
 };
 
+// POKÉDEX SEARCH
+const drawTodasPokemons = () => {
+  const pokedexTodasSpl = ALL_POKEMONS.slice(0, 386);
+  console.log(pokedexTodasSpl);
+  drawPokemons(pokedexTodasSpl, pokedex$$);
+};
+const pokedexTodas = document.getElementById("pokedex-todas");
+pokedexTodas.addEventListener("click", drawTodasPokemons);
+
+
+
+const drawKantoPokemons = () => {
+  const pokedexKantoSpl = ALL_POKEMONS.slice(0, 151);
+  console.log(pokedexKantoSpl);
+  drawPokemons(pokedexKantoSpl, pokedex$$);
+};
+const pokedexKanto = document.getElementById("pokedex-kanto");
+pokedexKanto.addEventListener("click", drawKantoPokemons);
+
+
+
+const drawJohtoPokemons = () => {
+  const pokedexJohtoSpl = ALL_POKEMONS.slice(151, 251);
+  console.log(ALL_POKEMONS);
+  console.log(pokedexJohtoSpl);
+  drawPokemons(pokedexJohtoSpl, pokedex$$);
+};
+const pokedexJohto = document.getElementById("pokedex-johto");
+pokedexJohto.addEventListener("click", drawJohtoPokemons);
+
+
+
+const drawHoennPokemons = () => {
+  const pokedexHoennSpl = ALL_POKEMONS.slice(251, 386);
+  console.log(pokedexHoennSpl);
+  drawPokemons(pokedexHoennSpl, pokedex$$);
+};
+const pokedexHoenn = document.getElementById("pokedex-hoenn");
+pokedexHoenn.addEventListener("click", drawHoennPokemons);
+
+
+
+
+
+//const pokeUrl = "https://pokeapi.co/api/v2/pokemon/";
+//KANTO POKÉDEX
+/*const kantoPokedex = async () => {
+  for (let i = 1; i <= 151; i++) {
+    const res = await fetch(`${pokeUrl}${i}`);
+    const resJson = await res.json();
+    ALL_POKEMONS.push(resJson);
+  }
+  drawKantoPokemons();
+};
+
+const drawKantoPokemons = () => {
+  pokedex$$.innerHTML = "";
+  for (let i = 0; i <= 151; i++) {
+    const pokemon = ALL_POKEMONS[i];
+    drawPokemons(pokemon, pokedex$$);
+  }
+};
+
+const pokedexKanto = document.getElementById("pokedex-kanto");
+pokedexKanto.addEventListener("click", drawKantoPokemons);
+
+//JOHTO POKÉDEX
+const johtoPokedex = async () => {
+  for (let i = 152; i <= 251; i++) {
+    const res = await fetch(`${pokeUrl}${i}`);
+    const resJson = await res.json();
+    ALL_POKEMONS.push(resJson);
+  }
+  drawJohtoPokemons();
+};
+
+const drawJohtoPokemons = () => {
+  pokedex$$.innerHTML = "";
+  for (let i = 152; i <= 251; i++) {
+    const pokemon = ALL_POKEMONS[i];
+    drawPokemons(pokemon, pokedex$$);
+  }
+};
+
+const pokedexJohto = document.getElementById("pokedex-johto");
+pokedexJohto.addEventListener("click", drawJohtoPokemons);
+
+//HOENN POKÉDEX
+const hoennPokedex = async () => {
+  for (let i = 252; i <= 386; i++) {
+    const res = await fetch(`${pokeUrl}${i}`);
+    const resJson = await res.json();
+    ALL_POKEMONS.push(resJson);
+  }
+  drawHoennPokemons();
+};
+
+const drawHoennPokemons = () => {
+  pokedex$$.innerHTML = "";
+  for (let i = 252; i <= 386; i++) {
+    const pokemon = ALL_POKEMONS[i];
+    drawPokemons(pokemon, pokedex$$);
+  }
+};
+
+const pokedexHoenn = document.getElementById("pokedex-hoenn");
+pokedexHoenn.addEventListener("click", drawHoennPokemons);*/
+
+//START CODE
 const startMyCode = async () => {
   addAllMyEventsListeners();
   drawTypesButtons();
