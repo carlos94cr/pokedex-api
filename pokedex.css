@@ -246,9 +246,9 @@ h1 {
   border-radius: 10%;
   list-style: none;
   padding: 25px;
-  background: #f85032;
-  background: -webkit-gradient(linear, left top, right top, from(#f85032), color-stop(85%, #aaf134));
-  background: linear-gradient(90deg, #f85032 0%, #aaf134 85%);
+  background: #f60000;
+  background: -webkit-gradient(linear, left top, right top, color-stop(11%, #f60000), color-stop(100%, #42e00e), to(#00d4ff));
+  background: linear-gradient(90deg, #f60000 11%, #42e00e 100%, #00d4ff 100%);
   color: #222;
   text-align: center;
   height: auto;

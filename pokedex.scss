@@ -173,6 +173,7 @@ display: flex;
 
 body {
   background-color: rgb(30, 30, 30);
+  
   margin: 0;
   font-family: rubik;
   color: white;
@@ -190,12 +191,13 @@ h1 {
   border-radius: 10%;
   list-style: none;
   padding: 25px;
-  background: rgb(248,80,50);
-  background: linear-gradient(90deg, rgba(248,80,50,1) 0%, rgba(170,241,52,1) 85%);
+  background: rgb(246,0,0);
+  background: linear-gradient(90deg, rgba(246,0,0,1) 11%, rgb(66, 224, 14) 100%, rgba(0,212,255,1) 100%);
   color: #222;
   text-align: center;
   height: auto;
   width: 50vh;
+  //box-shadow: 0px 0px 71px 8px rgba(27,168,219,0.8);
 }
 .card-title {
   text-transform: uppercase;
