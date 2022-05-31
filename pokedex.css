@@ -243,9 +243,12 @@ h1 {
 }
 
 .card {
+  border-radius: 10%;
   list-style: none;
   padding: 25px;
-  background-color: orangered;
+  background: #f85032;
+  background: -webkit-gradient(linear, left top, right top, from(#f85032), color-stop(85%, #aaf134));
+  background: linear-gradient(90deg, #f85032 0%, #aaf134 85%);
   color: #222;
   text-align: center;
   height: auto;

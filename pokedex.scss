@@ -187,9 +187,11 @@ h1 {
   font-size: 54px;
 }
 .card {
+  border-radius: 10%;
   list-style: none;
   padding: 25px;
-  background-color: orangered;
+  background: rgb(248,80,50);
+  background: linear-gradient(90deg, rgba(248,80,50,1) 0%, rgba(170,241,52,1) 85%);
   color: #222;
   text-align: center;
   height: auto;
